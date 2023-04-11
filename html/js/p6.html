@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arithimetic operetaions</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>A</td>
+			<td><input type="text" id="fn"></td>
+			   
+		</tr>
+		<tr>
+			<td>B</td>
+			<td><input type="text" id="sn"></td>
+			   
+		</tr>
+		
+		<tr>
+			<th colspan="2">
+				<input type="button"  onclick="getvalues('+')" value="+">
+				<input type="button"  onclick="getvalues('-')" value="-">
+				<input type="button"  onclick="getvalues('*')" value="*">
+				<input type="button"  onclick="getvalues('/')" value="/">
+				<input type="button"  onclick="getvalues('all')" value="ALL">
+			
+		    </th>
+		</tr>
+		<tr>
+			<td>Addittion</td>
+			<td><input type="text" id="a"></td>	   
+		</tr>
+		<tr>
+			<td>Substraction</td>
+			<td><input type="text" id="b"></td>	   
+		</tr>
+		<tr>
+			<td>Multipilication</td>
+			<td><input type="text" id="c"></td>	   
+		</tr>
+		<tr>
+			<td>Division</td>
+			<td><input type="text" id="d"></td>	   
+		</tr>
+	</table>
+</body>
+<script type="text/javascript">
+function getvalues(a){
+	var n1=document.getElementById("fn").value;
+	var n2=document.getElementById("sn").value;
+	if (a=='+') {
+		add(n1,n2);
+	}else if (a=='-'){
+		substraction(n1,n2);
+	}else if (a=='*'){
+		multipilication(n1,n2);
+	}else if (a=='/') {
+		divide(n1,n2);
+	}else if (a=='all') {
+		add(n1,n2);
+		substraction(n1,n2);
+		multipilication(n1,n2);
+		divide(n1,n2);
+	}
+}
+
+    function add(a,b){
+    	var c=parseInt(a)+parseInt(b);
+    	document.getElementById("a").value=c;
+    }
+    function substraction(a,b){
+    	var c=parseInt(a)-parseInt(b);
+    	document.getElementById("b").value=c;
+    }
+    function multipilication(a,b){
+    	var c=parseInt(a)*parseInt(b);
+    	document.getElementById("c").value=c;
+    }
+    function divide(a,b){
+    	var c=parseInt(a)/parseInt(b);
+    	document.getElementById("d").value=c;
+    }
+
+</script>
+</html>

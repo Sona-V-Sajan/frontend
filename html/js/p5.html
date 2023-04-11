@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>program 5</title>
+</head>
+<body>
+<table>
+	<tr>
+		<td>First number</td>
+		<td><input type="text" id="fn"></td>
+	</tr>
+	<tr>
+		<td>Second number</td>
+		<td><input type="text"  id="sn"></td>
+	</tr>
+	<tr>
+		<td>Multiplication</td>
+		<td><input type="text" id="res"></td>
+		<td><input type="button" onclick="multiply()" value="Get Result"></td>
+	</tr>
+	<tr>
+		<td>Division</td>
+		<td><input type="text" id="res1"></td>
+		<td><input type="button" onclick="divide()" value="Get Result1"></td>
+
+	</tr>
+	
+</table>
+</body>
+<script type="text/javascript">
+	function multiply(){
+		var n1=document.getElementById("fn").value;
+		var n2=document.getElementById("sn").value;
+		var n3=n1*n2;
+		document.getElementById("res").value=n3;
+	}
+	function divide(){
+	   	var n1=document.getElementById("fn").value;
+		var n2=document.getElementById("sn").value;
+		var n3=n1/n2;
+		document.getElementById("res1").value=n3;
+	   }
+
+</script>
+</html>
